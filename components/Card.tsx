@@ -17,7 +17,7 @@ const Card = ({ name, text, image }: CardProps) => {
     //     </div>
     //   </div>
     // </a>
-    <a href={"watches/" + name}>
+    <a href={"http://localhost:3000/watches/" + name}>
       <div className="bg-white rounded shadow p-4">
         <img
           className="w-full h-64 rounded object-cover shadow-lg mb-4"

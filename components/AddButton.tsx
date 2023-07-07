@@ -131,7 +131,7 @@ const AddButton: React.FC = () => {
               name="text"
               value={text}
               onChange={handleInputChange}
-              className="textarea textarea-bordered textarea-lg w-full max-w-xs"
+              className="textarea textarea-bordered textarea-md w-full max-w-xs"
             />
 
             <label
