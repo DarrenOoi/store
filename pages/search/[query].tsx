@@ -27,9 +27,6 @@ interface WatchesProps {
 const Watches: NextPage<WatchesProps> = ({ watches }) => {
   const router = useRouter();
 
-  //   if (!watches) {
-  //     return <div>No watches found</div>;
-  //   }
   return (
     <div className="bg-gray-100 px-4 py-4">
       <Head>

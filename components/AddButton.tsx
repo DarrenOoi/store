@@ -16,10 +16,6 @@ const AddButton: React.FC = () => {
     setIsClicked(!isClicked);
   };
 
-  //   const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-  //     setInputValue(event.target.value);
-  //   };
-
   const handleInputChange = (
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -44,7 +40,6 @@ const AddButton: React.FC = () => {
     event.preventDefault();
 
     //try {
-    //const response = await fetch(`/api/AddProducts?watchId=${watchId}`, {
     const response = await fetch(`/api/AddProducts`, {
       method: "POST",
       headers: {
@@ -54,8 +49,6 @@ const AddButton: React.FC = () => {
     });
 
     if (response.ok) {
-      // Optional: Perform any additional actions after successful database update
-
       setInputValue("");
       setText("");
       setImage(""); // Reset input value
@@ -83,15 +76,6 @@ const AddButton: React.FC = () => {
         <button onClick={handleButtonClick} className="btn btn-neutral">
           Add Product
         </button>
-        {/* <button
-          onClick={handleButtonClick}
-          className={`bg-${isClicked ? "green-500" : "green-500"} hover:bg-${
-            isClicked ? "green-700" : "green-700"
-          } text-white font-bold py-1 px-2 rounded`}
-        >
-          Add Product
-        </button> */}
-
         {/* doesnt reload or pop up the second time */}
 
         {showPop ? (

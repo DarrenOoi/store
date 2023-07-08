@@ -7,7 +7,6 @@ import { ParsedUrlQuery } from "querystring";
 import PopUp from "@/components/PopUp";
 import { useState } from "react";
 import DeleteButton from "@/components/DeleteButton";
-import Footer from "@/components/Footer";
 
 interface Watch {
   id: number;
@@ -42,6 +41,7 @@ const Watches: NextPage<WatchesProps> = ({ watch }) => {
   };
 
   const handleInputChange = (
+    // function receives the event object of type ChangeEvent when the value of either the input or textarea element changes.
     event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = event.target;

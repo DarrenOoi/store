@@ -20,6 +20,8 @@ interface HomeProps {
   watches: Watch[];
 }
 
+// getStaticProps used to fetch data at build time and pre-render pages with the fetched data.
+// Used when data doesn't change frequently and can be determined at build time.
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
   const watches = await prisma.watches.findMany();
 
