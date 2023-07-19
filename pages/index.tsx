@@ -8,7 +8,6 @@ import Footer from "@/components/Footer";
 import Banner from "@/components/Banner";
 import NavBar from "@/components/NavBar";
 import { useState } from "react";
-import SearchBar from "@/components/SearchBar";
 
 interface Watch {
   id: number;
@@ -21,16 +20,16 @@ interface HomeProps {
   watches: Watch[];
 }
 
-function Home({ watches: initialData }: HomeProps) {
-  const [watches, setWatches] = useState(initialData);
-  const [query, setQuery] = useState("");
+function Home({ watches }: HomeProps) {
+  //testing filter search results on index page
 
-  const onSearch = (searchString: string) => {
-    const filteredWatches = initialData.filter((watch) =>
-      watch.name.includes(searchString)
-    );
-    setWatches(filteredWatches); // Update the watches state with the filtered data
-  };
+  // const [watches, setWatches] = useState(initialData);
+  // const onSearch = (searchString: string) => {
+  //   const filteredWatches = initialData.filter((watch) =>
+  //     watch.name.includes(searchString)
+  //   );
+  //   setWatches(filteredWatches); // Update the watches state with the filtered data
+  // };
 
   return (
     <div className="bg-gray-100 px-4 py-4">
