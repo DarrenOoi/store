@@ -159,6 +159,8 @@ const Watches: NextPage<WatchesProps> = ({ watch }) => {
   );
 };
 
+// getServerSideProps is used to fetch data from a server-side data source or perform server-side computations before rendering a page.
+// This page depends on dynamic query value (watch name) therefore need to fetch data at request time
 export const getServerSideProps: GetServerSideProps<
   WatchesProps,
   Params

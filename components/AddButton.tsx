@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
 import PopUp from "./PopUp";
 
 const AddButton: React.FC = () => {
@@ -62,12 +61,6 @@ const AddButton: React.FC = () => {
       setSuccess(false);
       setShowPop(true);
     }
-    // } catch (error) {
-    //   console.error("Error updating database:", error);
-    //   // Handle and display error message to the user
-    //   setSuccess(false);
-    //   setShowPop(true);
-    // }
   };
 
   return (

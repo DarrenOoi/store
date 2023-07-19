@@ -24,8 +24,10 @@ interface WatchesProps {
   watches: Watch[];
 }
 
-const Watches: NextPage<WatchesProps> = ({ watches }) => {
+const Watches: NextPage<WatchesProps, Params> = ({ watches }) => {
   const router = useRouter();
+  //access query parameters of current url using useRouter hook
+  const { query } = router.query;
 
   return (
     <div className="bg-gray-100 px-4 py-4">
@@ -36,7 +38,7 @@ const Watches: NextPage<WatchesProps> = ({ watches }) => {
       <Banner />
 
       <br></br>
-      <h2 className="text-2xl  mb-8">Search Results:</h2>
+      <h2 className="text-2xl  mb-8">Search Results for "{query}"</h2>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-8 ">
         {watches.map((watch) => (

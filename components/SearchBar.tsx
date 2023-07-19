@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 
+// interface SearchProps {
+//   handleSearch: void;
+//   handleQuery: (query: string) => void;
+// }
+
 const SearchBar = () => {
   const [query, setQuery] = useState("");
   const router = useRouter();

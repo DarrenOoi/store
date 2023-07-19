@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 interface CardProps {
   name: string;
   text: string;
@@ -17,7 +19,7 @@ const Card = ({ name, text, image }: CardProps) => {
     //     </div>
     //   </div>
     // </a>
-    <a href={"http://localhost:3000/watches/" + name}>
+    <Link href={"http://localhost:3000/watches/" + name}>
       <div className="bg-white rounded shadow p-4">
         <img
           className="w-full h-64 rounded object-cover shadow-lg mb-4"
@@ -27,7 +29,7 @@ const Card = ({ name, text, image }: CardProps) => {
         <h2 className="text-2x1 font-bold mb-2">{name}</h2>
         <p className="text-sm text-gray-500">{text.substring(0, 90)}</p>
       </div>
-    </a>
+    </Link>
   );
 };
 
